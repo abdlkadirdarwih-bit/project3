@@ -12,4 +12,4 @@ export default defineConfig({
 
 //git add . 
 //git commit -m "change ui"  "first commit"
-//git push -u origin git push -u origin gh-pages
+//git push -u origin main
