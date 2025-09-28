@@ -91,8 +91,8 @@ import UpdateEvent from './UpdateUser'
 
   return (
 <div>
-    {/* <BrowserRouter basename="/project3"> */}
-    <BrowserRouter >
+    <BrowserRouter basename="/project3">
+    {/* <BrowserRouter > */}
 
 
   
