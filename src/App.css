@@ -1,42 +1,223 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
+.page{
+  width: 99vw;
+  /* width: 100% ; */
+}
+
+.contact-details {
+  /* width: 1590px; */
+  /* display: flex;
+    justify-content: center;
+   align-items: center;
+    flex-wrap: wrap; */
+  height: 230px;
+  /* height: auto; خليه auto أفضل */
+  margin-top: 60px;
+
+  color: white;
+  background-color: #0aad4f;
+}
+
+
+.contact-details-footer-homesch {
+  /* width: 1335px; */
+   display: flex;
+   justify-content: center;
+align-items: center;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+  min-height: 230px;
+  /* height: auto; خليه auto أفضل */
+  gap: 350px;
+  /* margin-top: 60px; */
+  color: white;
+  background-color: #0aad4f;
+}
+
+.phoneemailaddress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* يخليهم ينزلوا تحت بعض إذا ما في مساحة */
+  /* width: 600px; */
+  gap: 50px;
+  padding-top: 90px;
+  /* margin-left: 600px; */
   text-align: center;
+  /* width: 400px; */
+  /* height: 250px; */
+  /* color: rgba(58, 226, 16, 0.849); */
+  /* margin-left: 100px; */
+  /* background-color: #0aad4f; */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.folow {
+  display: flex;
+
+  /* width: 700px; */
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+  /* margin-left: 800px; */
+  text-align: center;
+  margin-right: 170px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 900px) {
+  .contact-details {
+    /* width:430px; */
+    /* height: 420px; */
+
+    /* background-color: #34e7d82c; */
+    background-color: #0aad4f;
+
+
   }
-  to {
-    transform: rotate(360deg);
+
+
+
+  .phoneemailaddress {
+    /* display: flex; */
+    width: 400px;
+    flex-direction: column;
+    /* يصيروا تحت بعض */
+
+    gap: 10px;
+    /* padding-top: 90px; */
+
+    margin-left: 0px;
+    /* background-color: rgba(185, 57, 185, 0.171); */
+
+
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+
+
+@media only screen and (max-width: 900px) {
+  .contact-details-footer-homesch {
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  }
+  .but-show-sch-home {
+   /* margin: 0; */
+  position: absolute;
+  top: 98%;
+}
+}
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  /* optional: keeps it from turning blue */
+}
+
+
+
+.phoneemailaddresssch {
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+  /* flex-wrap: wrap; */
+  /* يخليهم ينزلوا تحت بعض إذا ما في مساحة */
+  /* width: 600px; */
+/* text-align:left ; */
+  /* gap: 50px; */
+  /* padding-top: 40px; */
+  /* margin-left: 600px; */
+  /* text-align: center; */
+line-height: 1.6;
+  /* width: 400px; */
+  /* height: 250px; */
+  /* color: rgba(58, 226, 16, 0.849); */
+  /* margin-left: 100px; */
+  /* background-color: #0aad4f; */
+}
+
+/* .folow-sch { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+  text-align: center;
+  margin-right: 170px;
+} */
+
+
+.homeabout-footer-homesch {
+
+  /* display: flex; */
+  gap: 15px;
+  /* padding-top: 60px; */
+  /* padding-left: 290px; */
+
+  /* text-decoration: none;
+  color: inherit; */
+  /* optional: keeps it from turning blue */
+  /* text-decoration: underline; */
+}
+
+.home-footer-homesch {
+  /* padding: 50px; */
+  /* margin-left: 0px; */
+  text-decoration: none;
+  color: inherit;
+}
+
+.about-footer-homesch {
+  /* padding: 50px; */
+  /* margin-left: 0px; */
+  text-decoration: none;
+  color: inherit;
+}
+
+.homeabout-footer-homesch ul{
+list-style-type: none;
+line-height: 1.6;
+}
+.homeabout-footer-homesch ul li a{
+      /* font-size: 1rem; */
+color: white;
+text-decoration: none;
+}
+.homeabout-footer-homesch a:hover{
+color: rgb(241, 93, 138);
+text-decoration: none;
+}
+Link {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+.Copyright {
+  /* width: 1600px; */
+  /* width: 1335px; */
+
+  height: 75px;
+  /* color: white; */
+  /* margin-left: 100px; */
+  padding: 10px;
+  text-align: center;
+  color: green;
+  /* background-color: rgba(0, 180, 180, 0.171); */
+  background-color: #73d89d;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+  .Copyright {
+    height: 100px;
+    /* margin-bottom: 60px; */
+    /* padding-left: 90px; */
+    /* text-align: center; */
+
   }
 }
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.min-vh-100-custom {
+  min-height: 100vh; /* instead of fixed vh-100 */
+  margin-top: 120px;
 }

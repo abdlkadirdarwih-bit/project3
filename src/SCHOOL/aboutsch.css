@@ -1,0 +1,467 @@
+
+
+
+.container-image-about{
+    /* background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX1fYSfhq_jTMMJVCzFayf_HSyKBMLVAPMrg&s.jpg)no-repeat center center/cover; */
+      
+    background: url(https://stateline.org/wp-content/uploads/2023/09/school-start-times.jpg)no-repeat center center/cover;
+      position: relative;
+        width: 100%;
+  min-height: 550px;
+    z-index: 1;   /* put the image layer lower */
+          margin-top: 80px; /* adjust to your header height */
+
+     /* height: 50vh; */
+  /* width: 1550px; */
+    /* min-height: 550px; */
+    /* background-size: cover; */
+/* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.content-about {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.content-about h2 {
+    font-size: 6rem;
+    color: #fff;
+}
+
+
+@media screen and (max-width:768px) {
+.container-image{
+  /* width: 100%; */
+    /* min-height: 100%; */
+
+/* background-color: #fff; */
+}
+/* .content-about {
+    position: absolute;
+} */
+  .content-about h2 {
+        font-size: 4rem;
+        text-align: center;
+    }
+
+}
+
+
+
+.sect1aboutpar {
+  /* font-family: "Montserrat", sans-serif; */
+  /* width: 1200px; */
+  /* height: 250px; */
+  /* display: flex; */
+  /* margin: 40px 50px 30px 200px; */
+  background-color: rgb(55, 168, 11);
+
+  /* box-shadow: 3px 2px 5px rgb(172, 163, 163); */
+}
+
+
+
+.sect1about {
+  /* font-family: "Montserrat", sans-serif; */
+  /* width: 1200px; */
+  height: 250px;
+  /* display: flex; */
+  margin: 40px 50px 30px 200px;
+  background-color: rgb(55, 168, 11);
+
+  /* box-shadow: 3px 2px 5px rgb(172, 163, 163); */
+}
+
+.title-sec1-about {
+  /* width: 100px; */
+  text-align: right;
+  font-size: 28px;
+  font-weight: 500;
+  padding: 20px 90px 0px 0px;
+  color: rgb(55, 168, 11);
+  /* background-color: rgb(55, 168, 11); */
+  /* margin-bottom: 10px; */
+}
+
+.text-sec1-about {
+  /* width: 100px; */
+  text-align: right;
+  font-size: 18px;
+  /* font-weight: 500; */
+  padding: 30px 50px 0px 0px;
+  color: white;
+  /* margin-bottom: 10px; */
+}
+
+
+
+
+.sect2about {
+  /* font-family: "Montserrat", sans-serif; */
+  /* width: 1200px; */
+   width: 95%;
+  min-height: 250px;
+  margin: 50px auto;
+  /* display: flex; */
+  /* margin: 40px 50px 30px 200px; */
+  /* margin-bottom: 190px; */
+  /* background-color: rgb(55, 168, 11); */
+  /* box-shadow: 3px 2px 5px rgb(172, 163, 163); */
+}
+
+.img1-title-description-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  /* width: 300px; */
+  /* background-color: rgb(55, 168, 11); */
+}
+
+
+.img1-about-sec2-sch{
+
+    max-width: 100%;
+
+height:350px;
+margin-top: 90px;
+}
+
+.title-description-about {
+
+  /* display: block; */
+  /* max-width: 600px; */
+      max-width: 45%;
+
+/* margin-bottom: 70px; */
+  /* width: 45%; */
+  /* padding-bottom: 50px; */
+  /* padding-left: 200px; */
+  /* background-color: rgb(55, 168, 11); */
+
+}
+
+
+.title-description-about h1{
+  /* width: 100px; */
+  text-align: right;
+  font-size: 28px;
+  font-weight: 600;
+  padding: 0px 50px 0px 0px;
+  color: rgb(55, 168, 11);
+  /* background-color: rgb(55, 168, 11); */
+  /* margin-bottom: 10px; */
+}
+
+
+.title-description-about p{
+  /* width: 100px; */
+  text-align: right;
+  font-size: 18px;
+  /* font-weight: 500; */
+  padding: 10px 50px 0px 0px;
+  color: black;
+  /* margin-bottom: 10px; */
+}
+
+@media screen and (max-width:768px) {
+  .sect2about {
+        width: 95%;
+
+    /* order: -1; */
+    /* height: 630px; */
+margin-bottom: 50px;
+  }
+
+  .img1-title-description-about {
+    
+    flex-direction: column;
+  }
+
+  .title-description-about {
+
+    /* display: block; */
+    /* width: 780px; */
+    width: 100%;
+    /* padding-bottom: 50px; */
+    /* padding-right: 20px; */
+    /* background-color: rgb(55, 168, 11); */
+  }
+
+  .description-sec2-about{
+    /* width: 100px; */
+    /* text-align: right; */
+    font-size: 18px;
+    /* font-weight: 500; */
+    /* padding: 10px 50px 0px 0px; */
+    /* color: black; */
+    /* padding-right: 80px; */
+
+    /* margin-bottom: 10px; */
+  }
+
+  .img1-about-sec2-sch {
+    width: 100%;
+
+    /* width: 700px; */
+    /* height: 250px; */
+
+    padding-top: 50px;
+
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.section3 {
+  /* font-family: "Montserrat", sans-serif; */
+  /* display: flex; */
+  /* gap: 130px; */
+  /* width: 600px; */
+  min-height: 250px;
+    margin: auto;
+
+  /* border: 1px solid black; */
+  /* display: flex; */
+  /* margin: 40px 50px 30px 200px; */
+  /* box-shadow: 3px 2px 5px rgb(172, 163, 163); */
+}
+
+.sect3about{
+  /* font-family: "Montserrat", sans-serif; */
+  display: flex;
+  justify-content: center;
+align-items: center;
+  /* margin: auto; */
+
+  /* gap: 130px; */
+  /* width: 1200px; */
+  min-height: 320px;
+
+  /* display: flex; */
+  /* margin: 240px 50px 30px 200px; */
+    /* background-color: rgb(145, 231, 110); */
+
+  /* box-shadow: 3px 2px 5px rgb(172, 163, 163); */
+
+}
+
+.title-description-sec3-about{
+  /* width: 45%; */
+  max-width: 500px;
+  /* padding: ; */
+}
+.title-description-sec3-about h1{
+  /* width: 100px; */
+  text-align: right;
+  font-size: 25px;
+  font-weight: 700;
+  /* margin-right: 50px; */
+  color: rgb(46, 64, 231);
+  /* margin-bottom: 10px; */
+}
+
+.title-description-sec3-about p{
+  /* width: 100px; */
+  text-align: right;
+  font-size: 19px;
+/* font-weight: 435; */
+  /* margin-right: 40px; */
+  color: black;
+  /* margin-bottom: 10px; */
+}
+
+@media only screen and (max-width: 900px) {
+  .section3 {
+    /* width: 85%; */
+    min-height: 85%;
+    margin-left: 40px;
+      padding-right: 50px;
+
+  }
+
+  .sect3about {
+    /* width: 85%; */
+    display: flex;
+    flex-direction: column;
+      gap: 10px;
+            /* margin-right: 50px; */
+
+
+  }
+
+  /* .text-sec3-about {
+    font-size: 15px;
+  } */
+}
+
+
+
+  /* gap: 10px;
+  margin: 0px 0px 30px 0px; */
+.sect4-team-abouts{
+      min-height: 700px;
+
+
+}
+
+.title-text-sec3-abouts {
+    text-align: center;
+}
+.sect4about {
+  /* font-family: "Montserrat", sans-serif; */
+  display: flex;
+justify-content: center;
+align-items: center;
+  gap: 30px;
+  
+  /* width: 1200px; */
+/* min-height: 700px; */
+  /* margin-top: 150px; */
+  /* display: flex; */
+  /* margin: 240px 50px 30px 200px; */
+  /* background-color: rgb(160, 233, 131); */
+  /* box-shadow: 3px 2px 5px rgb(172, 163, 163); */
+
+}
+
+.title-text-sec3-abouts h1{
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  padding: 80px 0px 20px 10px;
+  color: rgb(226, 75, 75);
+}
+
+.title-text-sec3-abouts p{
+  /* width: 100px; */
+  text-align: center;
+  font-size: 18px;
+  /* font-weight: 500; */
+  padding: 10px 0px 0px 0px;
+  margin-bottom: 150px;
+  color: black;
+  /* margin-bottom: 10px; */
+}
+
+
+.section4 {
+  width: 400px;
+  min-height: 300px;
+  margin: 0 auto; /* center card itself */
+  box-shadow: 3px 4px 6px rgb(172, 163, 163);
+  border-radius: 12px;
+  text-align: center; /* center text under image */
+  background: #fff;
+  position: relative;
+
+}
+
+.title-description-sec4-about {
+  padding: 20px;
+}
+.title-description-sec4-about h1 {
+  font-size: 22px;
+  font-weight: 600;
+  padding-top: 45px;
+  color: black;
+}
+.title-description-sec4-about p {
+  font-size: 16px;
+    padding-top: 45px;
+
+  color: #333;
+}
+
+
+
+.img2-sect4-about-sch {
+    position: absolute;
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+    /* display: block;   */
+    /* required for margin auto */
+  width: 100px;
+  height: 100px;
+  /* height: 250px; */
+  /* padding-top: 50px; */
+  /* padding-left: 250px; */
+  /* margin: 0px 0px 0px 0px; */
+  /* margin-top: -50px; */
+  /* margin: -50px auto 0 auto;   */
+   top: -50px;
+  left: 50%;
+  /* margin-left: 145px; */
+  /* margin: -45px auto 0px 145px; */
+  border-radius: 50%;
+  border: 3px solid rgb(107, 224, 219);
+    transform: translateX(-50%); /* exact horizontal center */
+
+}
+
+@media only screen and (max-width: 900px) {
+  .sect4about{
+
+flex-direction: column;
+  gap: 50px;
+/* margin-top: 80px; */
+}
+/* .img2-sect4-about-sch {
+    margin: -50px auto 0 auto;  
+} */
+/* .title-text-sec3-abouts {
+  width: 85%;
+
+} */
+  .section4 {
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+}
+
+
+
+
+
+/* .section4 {
+ 
+  width: 400px;
+  min-height: 300px;
+    margin: 0 auto; 
+
+  box-shadow: 3px 2px 4px rgb(172, 163, 163);
+}
+
+
+.title-description-sec4-about{
+  max-width: 600px;
+  padding:20px;
+}
+.title-description-sec4-about h1{
+  text-align: right;
+  font-size: 25px;
+  font-weight: 500;
+  margin-right: 50px;
+  color: black;
+}
+
+.title-description-sec4-about p{
+  text-align: right;
+  font-size: 18px;
+  color: black;
+} */
