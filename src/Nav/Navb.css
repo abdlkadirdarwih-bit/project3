@@ -96,7 +96,8 @@ height:90px ;
     font-weight: 700; */
 
     /* padding: 20px 20px 20px 0px; */
-    background-color: #43dd64;
+    background-color:  #a9ce64;
+
     /* color: #212a3c; */
     /* font-size: 1.2rem; */
     /* cursor: pointer; */
@@ -132,12 +133,12 @@ height:90px ;
 .container ul li NavLink.active {
     /* background-color: #cedada; */
     /* background-color: #ecf0f1; */
-    color: #43dd64;
+    color:  #a9ce64;
 
 }
 
 .container ul li a.active-link {
-    color: #43dd64;
+    color:  #a9ce64;
     font-weight: bold;
 }
 

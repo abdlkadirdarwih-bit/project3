@@ -26,7 +26,9 @@
 //maintaining   الحفاظ على    ماينتاينين
 //ideas  أفكار  أيدييس 
 //cloning    كلانين   استنساخ
-
+//nicely  بشكل جيد    نَيسلي
+//shrink  شرينك-تقلص, انقبض   ينكمش
+//Whether  سواء وازر
 
 import   "./App.css";
 // import   "./TALABATAK/Talabatak.css";
@@ -35,9 +37,14 @@ import   "./App.css";
 // import   "./TALABATAK/Navbar.css";
 
 // import Homesch from "./SCHOOL/homeschl";
+
 import Navbar from "./Nav/Navb.jsx";
 import   "./Nav/Navb.css";
+import LoginPage from "./LoginSchool/LoginPage.jsx";
+import   "./LoginSchool/LoginPage.css";
 
+import ChangePasswordPage from "./LoginSchool/ChangePasswordPage";
+import RegisterPage from "./LoginSchool/RegisterPage";
 import Homesch from "./SCHOOL/homesch.jsx";
 import   "./SCHOOL/homesch.css";
 // import Homesch from "./SCHOOL/homesch.jsx";
@@ -52,6 +59,9 @@ import Contact from "./SCHOOL/contact.jsx";
 import   "./SCHOOL/contact.css";
 import Eventmoresch from "./SCHOOL/eventmore.jsx";
 import   "./SCHOOL/eventmore.css";
+import Login from './SCHOOL/Login.jsx'
+import   "./SCHOOL/Login.css";
+
 // import Eventmoresch from "./SCHOOL/eventmore.jsx";
 // import   "./SCHOOL/eventmore.css";
 
@@ -75,9 +85,19 @@ import { useState, useEffect } from 'react';
 
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Events from './User'
-import CreateEvent from './CreateUser'
-import UpdateEvent from './UpdateUser'
+// import Events from '../schcrud/User.jsx'
+// import   "../schcrud/User.css";
+// import Events from './User'
+import Admin from './schcrud/admin.jsx'
+import   "./schcrud/admin.css";
+
+import Events from './schcrud/User.jsx'
+import   "./schcrud/User.css";
+
+import CreateEvent from './CreateEvent.jsx'
+import   "./SCHOOL/CreateEvent.css";
+
+import UpdateEvent from './UpdateEvent.jsx'
 
 // import Users from './User'
 // import CreateEvent from './CreateUser'
@@ -141,6 +161,9 @@ import UpdateEvent from './UpdateUser'
 {/* <Navbar/> */}
                      {/* <Route path="/Navba" element={<Navba/>} />  */}
               {/* <Route path="/homesch" element={<Navbar/>} />  */}
+ <Route path="/login" element={<LoginPage />} />
+        <Route path="/change-password" element={<ChangePasswordPage />} />
+                <Route path="/register" element={<RegisterPage />} />
 
               <Route path="/homesch" element={<Homesch/>} /> 
               <Route path="/eventsch" element={<Eventsch/>} /> 
@@ -149,6 +172,8 @@ import UpdateEvent from './UpdateUser'
                             <Route path="/contact" element={<Contact/>} /> 
 
               <Route path="/eventmoresch" element={<Eventmoresch/>} /> 
+  {/* <Route path='/login' element={<Login/>}></Route>  */}
+  <Route path='/admin' element={<Admin/>}></Route> 
 
        
       {/* <Route path="/home" element={<Home/>} />  */}
@@ -170,11 +195,11 @@ import UpdateEvent from './UpdateUser'
  <div className="contact-details-footer-homesch">
         <div className="homeabout-footer-homesch">
    
-         <ul>
-            <li><a href="/homesch">Home </a></li>
-              <li><a href="/aboutsch">About Us </a></li>
-            <li><a href="/eventsch">Events </a></li>
-            <li><a href="/contactsch">Contacts </a></li>
+         <ul >
+            <li><a href="/homesch">الرئيسية </a></li>
+              <li><a href="/aboutsch"> حول المدرسه </a></li>
+            <li><a href="/eventsch">الأنشطة </a></li>
+            <li><a href="/contactsch">الاتصال </a></li>
 
           </ul>  
         </div>

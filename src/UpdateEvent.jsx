@@ -165,9 +165,13 @@ const [images, setImages] = useState([""]); // up to 3 images(["", "", ""])
       .catch(err => console.log(err))
   
   }
+    //  <div className="d-flex  justify-content-center align-items-center"
+    //         style={{ width: "100vw", minHeight: "100vh",marginTop:"110px", backgroundColor: "rgb(205,230,155)" }}
+
+    //   ></div>
   return (
     <div className="d-flex  justify-content-center align-items-center"
-             style={{ width: "100vw", height: "100vh",backgroundColor:"blue" }}
+             style={{ width: "100vw", height: "100vh",marginTop:"110px", backgroundColor: "rgb(205,230,155)" }}
 >
  <div className="w-50 bg-white rounded p-3">
   <form onSubmit={Update}>
@@ -253,6 +257,8 @@ const [images, setImages] = useState([""]); // up to 3 images(["", "", ""])
     </div>
     {/* Delete button */}
     <button
+                 style={{ marginTop:"20px" }}
+
       type="button"
       className="btn btn-danger btn-sm ms-2"
       onClick={() => {
@@ -267,6 +273,7 @@ const [images, setImages] = useState([""]); // up to 3 images(["", "", ""])
 
 {/* Add new image field */}
 <button
+                 style={{ marginBottom:"20px" }}
   type="button"
   className="btn btn-primary btn-sm mt-2"
   onClick={() => setImages([...images, ""])}
@@ -275,7 +282,7 @@ const [images, setImages] = useState([""]); // up to 3 images(["", "", ""])
 </button>
 
 
- 
+ <tr></tr>
     <button className="btn btn-success"> Update</button>
   </form>
   </div>

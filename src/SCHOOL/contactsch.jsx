@@ -97,7 +97,7 @@ export default function Contactsch() {
             .then(result => {
                 console.log(result)
                 if (result.data) {
-                    navigate('/home')
+                    navigate('/homesch')
                 }
             })
             .catch(err => console.log(err))
@@ -120,7 +120,9 @@ export default function Contactsch() {
  <div className="container-image-contact">
 
   <div className="content-contact">
-<h2>Al Bader School </h2>
+<h2>مدرسة البدر للتربية والتعليم  </h2>
+<p>مؤسسة تربوية تعليمية، لا تتوخى الربح، مرخص لها من السلطة اللبنانية، بموجب قانون رقم 6384 تاريخ 23\2\1995 .</p>
+
   </div>
   </div>
 

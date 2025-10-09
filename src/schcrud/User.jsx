@@ -159,121 +159,210 @@ const handleDelete  = (id) => {
     .catch(err => console.log(err))
 
 }
-                  // <td>{user.imageId}</td> 
+                  // <td>{user.imageId}</td>
+  //                <div className="d-flex min-vh-100-custom bg-primary justify-content-center align-items-center">
+  // <div className="w-50 bg-white rounded p-3"> 
    return (
-<div className="d-flex min-vh-100-custom bg-primary justify-content-center align-items-center">
-  <div className="w-50 bg-white rounded p-3">
-  <Link to="/create" className="btn btn-success">Add +</Link>
-<table className="table">
-<thead>
-  <tr>
-        <th>mainImage</th>
-    <th>images</th>
-    <th> date</th>
-        <th>place</th>
-    <th>title </th>
-        <th> text</th>
+<div>
+  {/* // <div className="users">
+  // <div className="">
+        // <div className="d-flex min-vh-100-custom bg-primary justify-content-center align-items-center" */}
 
-    <th>Action</th>
-
-  </tr>
-</thead>
-<tbody>
-
-  {
-    events.map((event)=> {
-      return(
-      <tr key={event._id}>
-
-        <td>
-  <img 
-    // src={event.mainImage} 
-        src={`http://localhost:3001${event.mainImage}`}
-
-    alt={event.productName} 
-    style={{ width: "80px", height: "80px", objectFit: "cover" }} 
-  />
-</td>
+     
 
 
+ 
+ <div className="events-container">
+      <div className="events-wrapper">
+        <Link to="/create" className="btn-add-event">
+          Add +
+        </Link>
 
+        <div className="table-responsive-events">
+          <table className="table-events">
+            <thead className="thead-events">
+              <tr className="tr-events">
+                <th className="th-events">Main Image</th>
+                <th className="th-events">Images</th>
+                <th className="th-events">Date</th>
+                <th className="th-events">Place</th>
+                <th className="th-events">Title</th>
+                <th className="th-events">Text</th>
+                <th className="th-events">Action</th>
+              </tr>
+            </thead>
+            <tbody className="tbody-events">
+              {events.map((event) => (
+                <tr className="tr-events" key={event._id}>
+                  <td className="td-events">
+                    <img
+                      src={`http://localhost:3001${event.mainImage}`}
+                      alt={event.title}
+                      className="main-image-event"
+                    />
+                  </td>
 
+                  <td className="td-events" data-label="Images">
+                    {event.images && event.images.length > 0 ? (
+                      <div className="images-grid">
+                        {event.images.map((img, idx) => (
+                          <div key={idx} className="image-wrapper">
+                            <img
+                              src={`http://localhost:3001${img}`}
+                              alt={`img-${idx}`}
+                              className="sub-image-event"
+                            />
+                            <button
+                              className="btn-delete-img"
+                              onClick={() => handleDeleteImage(event._id, idx)}
+                            >
+                              Delete
+                            </button>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <span>No images</span>
+                    )}
+                  </td>
 
-<td>
-  {event.images && event.images.length > 0 ? (
-    event.images.map((img, idx) => (
-      <div key={idx} style={{ display: "flex", marginRight: "10px", textAlign: "center" }}>
-        <img
-          // src={img}
-           src={`http://localhost:3001${img}`}
-          alt={`img-${idx}`}
-          style={{ width: "60px", height: "60px", objectFit: "cover", display: "block", marginBottom: "5px" }}
-        />
-     <td>       <button
-          className="btn btn-sm btn-danger"
-          onClick={() => handleDeleteImage(event._id, idx)}
-        >
-          Delete
-        </button></td>
-        
+                  <td className="td-events">{event.date}</td>
+                  <td className="td-events">{event.place}</td>
+                  <td className="td-events">{event.title}</td>
+                  <td className="td-events">{event.text}</td>
+
+                  <td className="td-events actions-events">
+                    <Link to={`/update/${event._id}`} className="btn-update-event">
+                      Update
+                    </Link>
+                    <button
+                      className="btn-delete-event"
+                      onClick={() => handleDelete(event._id)}
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
-    ))
-  ) : (
-    <span>No images</span>
-  )}
-</td>
-
-
-
-
-
-
-
-
-
-{/* <td>
-  <Link to={`/update/${event._id}`} className="btn btn-success">
-    Update
-  </Link>
-
-  <button
-    className="btn btn-danger"
-    onClick={() => handleDelete(event._id)}
-  >
-    Delete
-  </button>
-</td> */}
-{/* <td>
-  <Link to={`/update/${event._id}`} className="btn btn-success">Update</Link>
-  <button className="btn btn-danger" onClick={() => handleDelete(event._id)}>Delete</button>
-</td> */}
-
-
-
-
-        <td>{event.date}</td>
-         <td>{event.place}</td>
-        <td>{event.title }</td>
-                <td>{event. text}</td>
-
-<td>
-  <Link to={`/update/${event._id}`} className="btn btn-success">Update </Link>
-<button className="btn btn-danger"
-onClick={(e) => handleDelete(event._id)}>Delete</button>
-</td>
-      </tr>
-      )
-    })
-  }
-</tbody>
-
-</table>
     </div>
-    </div>
+</div>
   )
 }
 
 export default Events;
+
+
+
+
+// <div className="d-flex  justify-content-center align-items-center"
+//             style={{ width: "100vw", minHeight: "100vh",marginTop:"110px", backgroundColor: "rgb(205,230,155)" }}
+
+//       >
+//    <div className="w-50 bg-white rounded p-3"> 
+//   <Link to="/create" className="btn btn-success">Add +</Link>
+// <table className="table">
+// <thead>
+//   <tr>
+//         <th>mainImage</th>
+//     <th>images</th>
+//     <th> date</th>
+//         <th>place</th>
+//     <th>title </th>
+//         <th> text</th>
+
+//     <th>Action</th>
+
+//   </tr>
+// </thead>
+// <tbody>
+
+//   {
+//     events.map((event)=> {
+//       return(
+//       <tr key={event._id}>
+
+//         <td>
+//   <img 
+//     // src={event.mainImage} 
+//         src={`http://localhost:3001${event.mainImage}`}
+
+//     alt={event.productName} 
+//     style={{ width: "80px", height: "80px", objectFit: "cover" }} 
+//   />
+// </td>
+
+
+
+
+
+// <td>
+//   {event.images && event.images.length > 0 ? (
+//     event.images.map((img, idx) => (
+//       <div key={idx} style={{ display: "flex", marginRight: "10px", textAlign: "center" }}>
+//         <img
+//           // src={img}
+//            src={`http://localhost:3001${img}`}
+//           alt={`img-${idx}`}
+//           style={{ width: "60px", height: "60px", objectFit: "cover", display: "block", marginBottom: "5px" }}
+//         />
+//      <td>       <button
+//           className="btn btn-sm btn-danger"
+//           onClick={() => handleDeleteImage(event._id, idx)}
+//         >
+//           Delete
+//         </button></td>
+        
+//       </div>
+//     ))
+//   ) : (
+//     <span>No images</span>
+//   )}
+// </td>
+
+
+// {/* <td>
+//   <Link to={`/update/${event._id}`} className="btn btn-success">
+//     Update
+//   </Link>
+
+//   <button
+//     className="btn btn-danger"
+//     onClick={() => handleDelete(event._id)}
+//   >
+//     Delete
+//   </button>
+// </td> */}
+// {/* <td>
+//   <Link to={`/update/${event._id}`} className="btn btn-success">Update</Link>
+//   <button className="btn btn-danger" onClick={() => handleDelete(event._id)}>Delete</button>
+// </td> */}
+
+
+
+
+//         <td>{event.date}</td>
+//          <td>{event.place}</td>
+//         <td>{event.title }</td>
+//                 <td>{event. text}</td>
+
+// <td>
+//   <Link to={`/update/${event._id}`} className="btn btn-success">Update </Link>
+// <button className="btn btn-danger"
+// onClick={(e) => handleDelete(event._id)}>Delete</button>
+// </td>
+//       </tr>
+//       )
+//     })
+//   }
+// </tbody>
+
+// </table>
+//     </div>
+//     </div>
 
 
 

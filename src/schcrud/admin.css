@@ -1,154 +1,66 @@
 
-.container-image-event{
-    /* background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX1fYSfhq_jTMMJVCzFayf_HSyKBMLVAPMrg&s.jpg)no-repeat center center/cover; */
-      
-    background: url(https://stateline.org/wp-content/uploads/2023/09/school-start-times.jpg)no-repeat center center/cover;
-      position: relative;
-        width: 100%;
-  min-height: 550px;
-    margin-top: 80px;
-    z-index: 1;   /* put the image layer lower */
-     /* height: 50vh; */
-  /* width: 1550px; */
-    /* min-height: 550px; */
-    /* background-size: cover; */
-/* display: flex;
-  justify-content: center;
-  align-items: center; */
-}
-.content-event {
-    position: absolute;
-    top:45%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-          background-color: gray;
-
-}
-
-.content-event h2 {
-  text-align: right;
-    font-size: 5rem;
-    color: #fff;
-}
-
-.content-event p {
-    font-size: 2rem;
-    color: #fff;
-}
-@media screen and (max-width:768px) {
-.container-image-event{
-  width: 100%;
-    /* min-height: 100%; */
-
-/* background-color: #fff; */
-}
-/* .content-about {
-    position: absolute;
-} */
- .content-event {
-    top:25%;
- }
-  .content-event h2 {
-        font-size: 4rem;
-        text-align: center;
-    }
-
-}
-
-.sect1event {
-  /* font-family: "Montserrat", sans-serif; */
-  width: 1200px;
-  height: 250px;
-  /* display: flex; */
-  margin: 40px 50px 30px 200px;
-  box-shadow: 3px 2px 5px rgb(172, 163, 163);
-}
-
-.title-sec1-event {
-  /* width: 100px; */
-  text-align: right;
-  font-size: 28px;
-  font-weight: 500;
-  padding: 20px 90px 0px 0px;
-  color: rgb(55, 168, 11);
-  /* background-color: rgb(55, 168, 11); */
-  /* margin-bottom: 10px; */
-}
-
-.text-sec1-event {
-  /* width: 100px; */
-  text-align: right;
-  font-size: 18px;
-  /* font-weight: 500; */
-  padding: 30px 50px 0px 0px;
-  color: black;
-  /* margin-bottom: 10px; */
-}
 
 
-@media only screen and (max-width: 900px) {
-  .sect1event {
-    /* width: 400px; */
-    /* height: 250px; */
-    /* display: flex; */
-    /* margin: 40px 50px 30px 200px; */
-    background-color: none;
-  }
-
-
+.page-admins{
+     /* width: 100%; */
+  min-height: 100vh; 
+    margin-top: 100px;
+  background-color: rgb(205, 230, 155);
+  /* border: 1px solid; */
 
 }
 
 
-.sect2event {
+.btn-event {
+  /* width: 100%; */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  /* font-family: "Montserrat", sans-serif; */
-  /* width: 1200px; */
-  height: 800px;
-  /* display: flex; */
-  /* margin: 40px 50px 30px 200px; */
-  /* border: 2px solid rgb(55, 196, 85); */
-  /* box-shadow: 3px 2px 5px rgb(172, 163, 163); */
-}
-@media only screen and (max-width: 900px) {
-  .sect2event {
-    flex-direction: column;
-  }
-}
-.img1-title-description-event {
-  /* display: flex; */
-  /* justify-content: center;
-  align-items: center; */
-  /* width: 300px; */
-  /* background-color: rgb(55, 168, 11); */
+  justify-content: flex-end;
+  background-color: #4CAF50;
+  color: white;
+    float: right;       
+
+  padding: 5px 12px;
+  margin-top: 135px ;
+  margin-right:190px ;
+  /* margin-left: 1200px; */
+  font-size: 1rem;
+    transition: background 0.2s;
 
 }
 
-.img1-event-sec2-sch {
-  width: 500px;
-  height: 200px;
-  padding-top: 50px;
-  /* margin: 0px 0px 0px 0px; */
+.btn-event:hover {
+  background-color: #388E3C;
+}
+.page-admin1{
+     /* width: 100%; */
+  /* display: flex; 
+  flex-wrap: wrap; */
+  /* min-height: 600px; */
+ padding-top: 195px;
+  /*border: 1px solid; */
+}
+.page-admin2{
+     /* width: 100%; */
+  display: flex; 
+  flex-wrap: wrap;
+  /* min-height: 600px; */
+  /* padding-top: 195px; */
+/* border: 1px solid; */
 }
 
-.title-description-event {
-  width: 780px;
-  margin-bottom: 30px;
-  /* margin-left: 200px; */
-  /* background-color: rgb(55, 168, 11); */
 
-}
 
-.sect3-events {
+
+/* event admin css */
+.sect3-admin {
   /* display: block; */
-      min-height: 700px;
+  /* margin-top: 250px; */
+      /* min-height: 700px; */
 
   /* background-color: rgb(243, 176, 240); */
 }
 
-.sect3event {
+.sect3admin{
   /* font-family: "Montserrat", sans-serif; */
   /* width: 1200px; */
   /* min-height: 800px; */
@@ -156,6 +68,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  max-width: 800px;
     /* min-height: 700px; */
   /* margin: 10px; */
   gap: 10px;
@@ -229,7 +142,7 @@
 .img2-event-sch {
   /* width: 348px; */
   width: 100%;
-  height: 200px;
+  min-height: 200px;
   /* margin: 75px 60px 0px 0px; */
 }
 
@@ -255,6 +168,9 @@
   width: 100%;
 }
 }
+
+
+
 .place-title-sec3-event {
   display: flex;
   align-items: center;
@@ -305,8 +221,124 @@ font-weight: 500; */
   color: black;
   /* background-color: white; */
   margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+/* css of contacts-table-messages */
+
+.contacts-table-messages-wrapper {
+  /* width: 100%;    */
+             /* prevent breaking on small screens */
+             width: 45%;  
+  display: flex;              /* use flexbox */
+  /* justify-content: flex-end;  */
+    /* overflow-x: auto;   */
+        /* ✅ enable horizontal scroll only if needed */
+
+}
+
+.contacts-table-messages {
+  width: 100%;                 /* table is 40% of the page */
+  max-width: 600px;           /* prevent breaking on small screens */
+  border-collapse: collapse;
+    /* table-layout: fixed;  */
+      /* ✅ forces cells to shrink and wrap */
+
+  font-family: Arial, sans-serif;
+  background: #fff;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.thead-messages {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.thead-messages-th {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tr-messages td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
    white-space: normal;   /* ✅ allow text to wrap */
  word-wrap: break-word; /* ✅ break long words if needed */
   overflow-wrap: break-word; /* ✅ modern equivalent */
-  max-width: 250px;      /* optional: limit column width */
+  max-width: 200px;      /* optional: limit column width */
 }
+
+.tr-messages:hover {
+  /* background-color: #f9f9f9; */
+  transition: 0.2s ease-in;
+}
+
+.tr-messages td:first-child {
+  text-align: center;
+  width: 50px;
+  font-weight: bold;
+}
+
+/* 📱 Responsive rule: on smaller screens, make table full width */
+/* @media (max-width: 768px) {
+    .contacts-table-messages-wrapper {
+            width: 100%;  
+    justify-content: center;  
+     margin: 10px;
+  }
+  .contacts-table-messages {
+    width: 90% !important;    
+  }
+} */
+
+@media (max-width: 768px) {
+  .contacts-table-messages-wrapper {
+    width: 100%;
+    justify-content: center;
+    /* overflow-x: auto; */
+      /* allow horizontal scroll only on very small devices */
+  }
+
+  .contacts-table-messages {
+    width: 90%;
+    max-width: none;
+    table-layout: fixed;
+    font-size: 14px;   /* smaller text on mobile */
+  }
+
+  .tr-messages td,
+  .thead-messages-th {
+    padding: 8px;       /* less padding for small screens */
+    max-width: 100px;   /* limit width to avoid overflow */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -237,7 +237,8 @@ axios.get("http://localhost:3001/")
  <div className="container-image-event">
 
   <div className="content-event">
-<h2>Al Bader School </h2>
+<h2>نشاطات مدرسة البدر  </h2>
+
   </div>
   </div>
 
@@ -277,9 +278,9 @@ axios.get("http://localhost:3001/")
       </div> */}
 <div  className='sect3-events'>
   <div className="title-text-sec3-events">
-    <div className='title-sec3-events '>فعاليتنا</div>
+    <div className='title-sec3-events '>  أنشطتنا</div>
        {/* <div className="text-sec3-events"> <p>نحن هنا لتلبية احتياجاتك ! إذا كنت بحاجة إلى اي منتج غير متوفر حاليًاعلى موقعنا</p> */}
-       <div className="text-sec3-events"> نحن هنا لتلبية احتياجاتك ! إذا كنت بحاجة إلى اي منتج غير متوفر حاليًاعلى موقعنا
+       <div className="text-sec3-events"> بعض النشاطات التي تقوم بها مدرسة البدر 
 </div></div>
 
 

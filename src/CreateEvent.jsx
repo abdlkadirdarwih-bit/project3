@@ -354,7 +354,7 @@
 // export default CreateEvent;
 
 
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -426,134 +426,145 @@ function CreateEvent() {
       .catch((err) => console.log(err));
   };
 
+
+
+ 
+
+
   return (
-    <div
-      className="d-flex justify-content-center align-items-center"
-      style={{ width: "100vw", height: "100vh", backgroundColor: "blue" }}
+    <div className="page"
     >
-      <div className="w-50 bg-white rounded p-3">
-        <form onSubmit={submit}>
-          <h2>Add Event</h2>
 
-          <div className="mb-2">
-            <label>Date</label>
-            <input
-              type="text"
-              placeholder="Enter Date"
-              className="form-control"
-              value={date}
-              onChange={(e) => setDate(e.target.value)}
-            />
+<div className="contacts-table-create-event-page">
+  <div className="contacts-table-create-event-container">
+    <form onSubmit={submit} className="contacts-table-create-event-form">
+      <h2 className="contacts-table-create-event-title">Add Event</h2>
+
+      <div className="form-group">
+        <input
+          type="text"
+          placeholder="التاريخ"
+          className="form-input"
+          value={date}
+          onChange={(e) => setDate(e.target.value)}
+        />
+      </div>
+
+      <div className="form-group">
+        <input
+          type="text"
+          placeholder=" المكان"
+          className="form-input"
+          value={place}
+          onChange={(e) => setPlace(e.target.value)}
+        />
+      </div>
+
+      <div className="form-group">
+        <input
+          type="text"
+          placeholder="العنوان "
+          className="form-input"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+      </div>
+
+      <div className="form-group">
+        <input
+          type="text"
+          placeholder="الوصف "
+          className="form-input"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        />
+      </div>
+
+      {/* Main Image */}
+      <div className="form-group">
+        <label>Main Image:</label>
+        <input
+          type="file"
+          accept="image/*"
+          id="mainImageInput"
+          style={{ display: "none" }}
+          onChange={handleMainImageChange}
+        />
+        <button
+          type="button"
+          className="btn-select"
+          onClick={() => openFilePicker("mainImageInput")}
+        >
+          Select Main Image
+        </button>
+        {mainImagePreview && (
+          <div className="image-preview">
+            <img src={mainImagePreview} alt="Main" />
           </div>
+        )}
+      </div>
 
-          <div className="mb-2">
-            <label>Place</label>
-            <input
-              type="text"
-              placeholder="Enter Place"
-              className="form-control"
-              value={place}
-              onChange={(e) => setPlace(e.target.value)}
-            />
-          </div>
+      {/* Additional Images */}
+      <button
+        type="button"
+        className="btn-add-image"
+        onClick={() => {
+          setImagesFiles([...imagesFiles, null]);
+          setImagesPreviews([...imagesPreviews, ""]);
+        }}
+      >
+        + Add Image
+      </button>
 
-          <div className="mb-2">
-            <label>Title</label>
-            <input
-              type="text"
-              placeholder="Enter Title"
-              className="form-control"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-            />
-          </div>
-
-          <div className="mb-2">
-            <label>Text</label>
-            <input
-              type="text"
-              placeholder="Enter Text"
-              className="form-control"
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-            />
-          </div>
-
-          {/* Main Image */}
-          <div className="mb-2">
-            <label>Main Image</label>
-            <input
-              type="file"
-              accept="image/*"
-              id="mainImageInput"
-              style={{ display: "none" }}
-              onChange={handleMainImageChange}
-            />
-            <button
-              type="button"
-              className="btn btn-sm btn-primary"
-              onClick={() => openFilePicker("mainImageInput")}
-            >
-              Select Main Image
-            </button>
-            {mainImagePreview && (
-              <div>
-                <img src={mainImagePreview} alt="Main" width="200" />
-              </div>
-            )}
-          </div>
-
-          {/* Additional Images */}
+      {imagesFiles.map((file, idx) => (
+        <div className="form-group" key={idx}>
+          <label>Image {idx + 1}:</label>
+          <input
+            type="file"
+            accept="image/*"
+            id={`imageInput${idx}`}
+            style={{ display: "none" }}
+            onChange={(e) => handleImageChange(idx, e)}
+          />
           <button
             type="button"
-            className="btn btn-sm btn-primary mb-2"
+            className="btn-select"
+            onClick={() => openFilePicker(`imageInput${idx}`)}
+          >
+            Select Image
+          </button>
+          <button
+            type="button"
+            className="btn-remove"
             onClick={() => {
-              setImagesFiles([...imagesFiles, null]);
-              setImagesPreviews([...imagesPreviews, ""]);
+              setImagesFiles(imagesFiles.filter((_, i) => i !== idx));
+              setImagesPreviews(imagesPreviews.filter((_, i) => i !== idx));
             }}
           >
-            + Add Image
+            Remove
           </button>
-
-          {imagesFiles.map((file, idx) => (
-            <div className="mb-2" key={idx}>
-              <label>Image {idx + 1}</label>
-              <input
-                type="file"
-                accept="image/*"
-                id={`imageInput${idx}`}
-                style={{ display: "none" }}
-                onChange={(e) => handleImageChange(idx, e)}
-              />
-              <button
-                type="button"
-                className="btn btn-sm btn-primary"
-                onClick={() => openFilePicker(`imageInput${idx}`)}
-              >
-                Select Image
-              </button>
-              {imagesPreviews[idx] && (
-                <div>
-                  <img src={imagesPreviews[idx]} alt={`Img ${idx + 1}`} width="200" />
-                </div>
-              )}
-              <button
-                type="button"
-                className="btn btn-sm btn-danger mt-1"
-                onClick={() => {
-                  setImagesFiles(imagesFiles.filter((_, i) => i !== idx));
-                  setImagesPreviews(imagesPreviews.filter((_, i) => i !== idx));
-                }}
-              >
-                Remove
-              </button>
+          {imagesPreviews[idx] && (
+            <div className="image-preview">
+              <img src={imagesPreviews[idx]} alt={`Img ${idx + 1}`} />
             </div>
-          ))}
+          )}
+        </div>
+      ))}
 
-          <button className="btn btn-success mt-2">Submit</button>
-        </form>
-      </div>
-    </div>
+      <button type="submit" className="btn-submit">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+</div>
+
   );
 }
 

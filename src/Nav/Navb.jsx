@@ -35,10 +35,12 @@ function Navbar() {
           <li><a href="/contactsch">Contacts</a></li>
         </ul> */}
         <ul className={isOpen ? "nav-link active" : "nav-link"}>
-  <li><NavLink to="/homesch" className={({ isActive }) => isActive ? "active-link" : ""}>Home</NavLink></li>
-  <li><NavLink to="/aboutsch" className={({ isActive }) => isActive ? "active-link" : ""}>About Us</NavLink></li>
-  <li><NavLink to="/eventsch" className={({ isActive }) => isActive ? "active-link" : ""}>Events</NavLink></li>
-  <li><NavLink to="/contactsch" className={({ isActive }) => isActive ? "active-link" : ""}>Contacts</NavLink></li>
+  <li><NavLink to="/homesch" className={({ isActive }) => isActive ? "active-link" : ""}>الرئيسية</NavLink></li>
+  <li><NavLink to="/aboutsch" className={({ isActive }) => isActive ? "active-link" : ""}>حول المدرسة  </NavLink></li>
+  <li><NavLink to="/eventsch" className={({ isActive }) => isActive ? "active-link" : ""}>الأنشطة</NavLink></li>
+  <li><NavLink to="/contactsch" className={({ isActive }) => isActive ? "active-link" : ""}>الاتصال</NavLink></li>
+    <li><NavLink to="/login" className={({ isActive }) => isActive ? "active-link" : ""}>تسجيل</NavLink></li>
+
 </ul>
 
 <div className="icon" onClick={toggleMenu}> <FaBars />

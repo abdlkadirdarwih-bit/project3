@@ -72,12 +72,12 @@ function Section2({ imageId, title, text, description }) {
     // <section className="profile">
 
     // <div className="profile-card">
-    <section className='sect2aboutpar' >
+    <section >
 
       <div className='img1-title-description-about'>
 
         {/* {console.log(" Image URL:", imageId)} */}
-        <div >
+        <div className='img-container ' >
           <img className="img1-about-sec2-sch"
             // src={imageId + '.jpg'} 
             // src={imageId}
@@ -123,20 +123,20 @@ function Section3({ imageId, title, description }) {
         /> */}
       <div className='title-description-sec3-about'>
 
-       <h1>{title}</h1>
-          {/* <h1 className='title-sec3-about '>{title}</h1> */}
+        <h1>{title}</h1>
+        {/* <h1 className='title-sec3-about '>{title}</h1> */}
         {/* <p className="description-sec2-about ">{description} </p> */}
-    <p style={{ whiteSpace: "pre-line" }}>{description.split("</br>").join("\n")} 
+        <p style={{ whiteSpace: "pre-line" }}>{description.split("</br>").join("\n")}
 
-</p>          </div>
+        </p>          </div>
 
- </section>
+    </section>
 
   );
 }
 
 
-function Section4({ imageId, title, description }) {
+function Section4({ imageId, title, name, description }) {
   return (
     // <section className="profile">
 
@@ -145,22 +145,25 @@ function Section4({ imageId, title, description }) {
 
 
       {/* {console.log(" Image URL:", imageId)} */}
-<div>
-      <img
-        className="img2-sect4-about-sch"
-        // src={imageId + '.jpg'} 
-        // src={imageId}
-        src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQF8UhOkTG9alEkYKkzPfnlHawXQRXK15XUQ&s'}
-        alt='productName'
-      />
-</div>
+      <div>
+        <img
+          className="img2-sect4-about-sch"
+          src={imageId + '.jpg'}
+          // src={imageId}
+          // src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQF8UhOkTG9alEkYKkzPfnlHawXQRXK15XUQ&s'}
+          alt='productName'
+        />
+      </div>
       <div className='title-description-sec4-about'>
 
         <h1>  {title}</h1>
-          {/* <h1 className='title-sec3-about '>{title}</h1> */}
+        <h2>  {name}</h2>
+
+        {/* <h2></h2> */}
+        {/* <h1 className='title-sec3-about '>{title}</h1> */}
         {/* <p className="description-sec2-about ">{description} </p> */}
-       <p style={{ whiteSpace: "pre-line" }}>{description.split("</br>").join("\n")}</p>
-        </div>
+        <p style={{ whiteSpace: "pre-line" }}>{description.split("</br>").join("\n")}</p>
+      </div>
 
     </section>
 
@@ -177,12 +180,14 @@ export default function Aboutsch() {
     <div className="page">
 
 
- <div className="container-image-about">
+      <div className="container-image-about">
 
-  <div className="content-about">
-<h2>Al Bader School </h2>
-  </div>
-  </div>
+        <div className="content-about">
+          <h2>مدرسة البدر للتربية والتعليم  </h2>
+          <p>مؤسسة تربوية تعليمية، لا تتوخى الربح، مرخص لها من السلطة اللبنانية، بموجب قانون رقم 6384 تاريخ 23\2\1995 .</p>
+
+        </div>
+      </div>
 
       {/* <div className="title-talab2"><h1 >أطلب منتجك</h1></div> */}
 
@@ -200,26 +205,27 @@ export default function Aboutsch() {
 
 
 
-        <div className="sect2about">
-          {/* <div className="title-talab2"><h1 >أطلب منتجك</h1></div> */}
+      <div className="sect2about">
+        {/* <div className="title-talab2"><h1 >أطلب منتجك</h1></div> */}
 
-          <Section2
-            // imageId: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu5DoqF7PBa-MgldlEW-VUYgs9-rE86Za3SQ&s"
-            //  imageId: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQF8UhOkTG9alEkYKkzPfnlHawXQRXK15XUQ&s'
+        <Section2
+          // imageId: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu5DoqF7PBa-MgldlEW-VUYgs9-rE86Za3SQ&s"
+          //  imageId: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQF8UhOkTG9alEkYKkzPfnlHawXQRXK15XUQ&s'
 
-            title="نتعلم طريقة ذكية لبناء مستقبل مشرق لأطفالك"
-            description=" راحة وسهولة في كل مكان !</br> استمتع بتجربة تسوق سهلة وآمنةحيث يمكنك طلب منتجاتك المحلية المفضلة بكل سهولة عبر موقعنا الإلكتروني مع ضمان </br>التوصيل السريع والشفافية في كل خطوة"
-          // bbb={item.bbb}
+          title="متى بدأت؟"
+          description="مؤسسة تربوية تعليمية، لا تتوخى الربح، مرخص لها من السلطة اللبنانية، بموجب قانون رقم 6384 تاريخ 23\2\1995 
+  وقد بدأ العمل  التدريسي في المدرسة في 1\10\1993، بعد أن تمكن مؤسس المدرسة وصاحبها الإستاذ عبدالله بدرالدين زكريا من تأمين العقار اللازم للبناء، وإعداد الملف القانوني للترخيص في أواخر العام 1992، وبدأ العمل في البناء، مع بدايات العام 1993 بتمويل خاص منه أيضا"
+        // bbb={item.bbb}
 
-          // imageId={item.imageId}
-          // title={item.title}
-          // price={item.price}
-          //  {...item}
+        // imageId={item.imageId}
+        // title={item.title}
+        // price={item.price}
+        //  {...item}
 
-          />
-          {/* <button className='buttontalab2'>          أطلب الان</button> */}
+        />
+        {/* <button className='buttontalab2'>          أطلب الان</button> */}
 
-        </div>
+      </div>
 
 
 
@@ -232,8 +238,9 @@ export default function Aboutsch() {
           // imageId: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu5DoqF7PBa-MgldlEW-VUYgs9-rE86Za3SQ&s"
           //  imageId: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQF8UhOkTG9alEkYKkzPfnlHawXQRXK15XUQ&s'
 
-          title="أطلب منتجك"
-          description=" راحة وسهولة في كل مكان !</br> استمتع بتجربة تسوق سهلة وآمنةحيث يمكنك طلب منتجاتك المحلية   مع ضمان </br>التوصيل السريع والشفافية في كل خطوة"
+          title=" أصل المدرسة"
+          description="في أواخر صيف 1993، تم بناء الطابق الأول. وتمّ تجهيزه بالأثاث المدرسي اللازم لإنطلاقة المدرسة. وبالفعل انطلق العمل في الأول من تشرين أول من العام ثلاثة وتسعين وتسعماية والف بإدارة المدير عبدالحكيم بدرالدين زكريا . "
+
         // bbb={item.bbb}
 
         // imageId={item.imageId}
@@ -246,8 +253,9 @@ export default function Aboutsch() {
 
         <Section3
 
-          title="أطلب منتجك"
-          description=" راحة وسهولة في كل مكان !</br> استمتع بتجربة تسوق سهلة وآمنةحيث يمكنك طلب منتجاتك المحلية المفضلة بكل سهولة عبر موقعنا الإلكتروني مع ضمان </br>التوصيل السريع والشفافية في كل خطوة"
+
+          title=" تطور المدرسة"
+          description=" أما بالنسبة لتسمية المدرسة بهذا الإسم أي مدرسة البدر للتربية والتعليم، فإن السبب في ذلك يعود لما لوالد المؤسس من فضل في مجال التعليم على بلدة فنيدق. فالسيد الشيخ بدرالدين محمد بكار زكريا يعتبر أول مدرس نظامي في المدرسة الرسمية التي أسست في فنيدق ومنطقة أعالي جرد القيطع، بسعي وجهد منه ومن والده الشيخ محمد بكار في العام 1946، مع معالي الوزير محمد عبود عبدالرزاق . وقد بقي الشيخ بدر مدرسا في المدرسة الرسمية حتى العام 1952 حيث أبعد لأسباب سياسية ، واستمر الشيخ الأستاذ في ممارسة المهنة مدرسا خصوصيا، إلى أن تمكن، وبعد سعي دؤوب، من تأسيس وفتح مدرسة جديدة في البلدة وبإدارته، تابعة للجنة تعليم أبناء المسلمين في القرى في أواخر العام 1958. وبدأ العمل في هذه المدرسة العام الدراسي 1958-1959. وفيما بعد انضوت هذه اللجنة بمدارسها بعد العام 1978 تحت جناح المؤسسة الأم جمعية المقاصد الخيرية الإسلامية في بيروت ، حيث بقي الوالد، الذي تعلم على يديه أجيال من فنيدق وجوارها، مديرا حتى أواخر العام 1983."
 
 
         />
@@ -258,45 +266,42 @@ export default function Aboutsch() {
 
       <div className="sect4-team-abouts">
         {/* <div className="title-talab2"><h1 >أطلب منتجك</h1></div> */}
-  <div className="title-text-sec3-abouts">
-    
-<h1>فعاليتنا</h1>
-         <p>نحن هنا لتلبية احتياجاتك ! إذا كنت بحاجة إلى اي منتج غير متوفر حاليًاعلى موقعنا</p>
-</div>
-      <div className="sect4about">
+        <div className="title-text-sec3-abouts">
 
-        <Section4
-          // imageId: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu5DoqF7PBa-MgldlEW-VUYgs9-rE86Za3SQ&s"
-          //  imageId: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQF8UhOkTG9alEkYKkzPfnlHawXQRXK15XUQ&s'
-   title=" مسؤول"  
-          description=" راحة وسهولة في كل مكان ! استمتع آمنةحيث يمكن  التوصيل السريع  في كل خطوة"
-        // bbb={item.bbb}
-
-        // imageId={item.imageId}
-        // title={item.title}
-        // price={item.price}
-        //  {...item}
-        />
+          <h1>الإدارة</h1>
+          <p>تعرف على أبرز موظفي وإداري المدرسة</p>
+        </div>
+        <div className="sect4about">
 
 
-        <Section4
+          <Section4
+            title=" مدير"
+            name="علي"
+            description=" راحة وسهولة في كل مكان ! استمتع آمنةحيث يمكن  التوصيل السريع  في كل خطوة"
+            imageId="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnMuUrcxFoI9TYUSFEhWBr6cUXC_5853jqXQ&s"
 
-          title=" مدرب"
-          description=" راحة وسهولة في كل مكان ! استمتع آمنةحيث يمكن  التوصيل السريع  في كل خطوة"
-
-
-        />
-        {/* <button className='buttontalab2'>          أطلب الان</button> */}
-
-        <Section4
-
-          title=" مدير"
-
-          description=" راحة وسهولة في كل مكان ! استمتع آمنةحيث يمكن  التوصيل السريع  في كل خطوة"
+          />
 
 
-        />
-      </div>
+          <Section4
+            title=" مساعد مدير"
+            name="علي"
+
+            description=" راحة وسهولة في كل مكان ! استمتع آمنةحيث يمكن  التوصيل السريع  في كل خطوة"
+            imageId="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnMuUrcxFoI9TYUSFEhWBr6cUXC_5853jqXQ&s"
+
+          />
+          {/* <button className='buttontalab2'>          أطلب الان</button> */}
+
+          <Section4
+            title=" محاسب"
+            name="علي"
+            description=" راحة وسهولة في كل مكان ! استمتع آمنةحيث يمكن  التوصيل السريع  في كل خطوة"
+            imageId="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnMuUrcxFoI9TYUSFEhWBr6cUXC_5853jqXQ&s"
+
+          />
+
+        </div>
       </div>
 
 
