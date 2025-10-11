@@ -35,6 +35,8 @@
     transform: translate(-50%, 0%);
       text-align: center;
       background-color: gray;
+        opacity: 0.8;
+
 }
 
 .content-home h2 {

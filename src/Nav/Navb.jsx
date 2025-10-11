@@ -35,7 +35,7 @@ function Navbar() {
           <li><a href="/contactsch">Contacts</a></li>
         </ul> */}
         <ul className={isOpen ? "nav-link active" : "nav-link"}>
-  <li><NavLink to="/homesch" className={({ isActive }) => isActive ? "active-link" : ""}>الرئيسية</NavLink></li>
+  <li><NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""}>الرئيسية</NavLink></li>
   <li><NavLink to="/aboutsch" className={({ isActive }) => isActive ? "active-link" : ""}>حول المدرسة  </NavLink></li>
   <li><NavLink to="/eventsch" className={({ isActive }) => isActive ? "active-link" : ""}>الأنشطة</NavLink></li>
   <li><NavLink to="/contactsch" className={({ isActive }) => isActive ? "active-link" : ""}>الاتصال</NavLink></li>

@@ -97,7 +97,7 @@ export default function Contactsch() {
             .then(result => {
                 console.log(result)
                 if (result.data) {
-                    navigate('/homesch')
+                    navigate('/')
                 }
             })
             .catch(err => console.log(err))

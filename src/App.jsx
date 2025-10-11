@@ -29,6 +29,12 @@
 //nicely  بشكل جيد    نَيسلي
 //shrink  شرينك-تقلص, انقبض   ينكمش
 //Whether  سواء وازر
+//touches   لمسات   تَتشس 
+//properly   على وجه صحيح   برابلي
+
+
+
+
 
 import   "./App.css";
 // import   "./TALABATAK/Talabatak.css";
@@ -111,8 +117,8 @@ import UpdateEvent from './UpdateEvent.jsx'
 
   return (
 <div>
-    <BrowserRouter basename="/project3">
-    {/* <BrowserRouter > */}
+    {/* <BrowserRouter basename="/project3"> */}
+    <BrowserRouter >
 
 
   
@@ -165,7 +171,7 @@ import UpdateEvent from './UpdateEvent.jsx'
         <Route path="/change-password" element={<ChangePasswordPage />} />
                 <Route path="/register" element={<RegisterPage />} />
 
-              <Route path="/homesch" element={<Homesch/>} /> 
+              <Route path="/" element={<Homesch/>} /> 
               <Route path="/eventsch" element={<Eventsch/>} /> 
               <Route path="/aboutsch" element={<Aboutsch/>} /> 
               <Route path="/contactsch" element={<Contactsch/>} /> 
@@ -181,7 +187,7 @@ import UpdateEvent from './UpdateEvent.jsx'
   {/* <Route path='/login' element={<Login/>}></Route> 
 <Route path='/register' element={<Signup/>}></Route> */}
 
-    <Route path='/' element={<Events />} />
+    <Route path='/event' element={<Events />} />
     <Route path='/create' element={<CreateEvent />} />
 <Route path='/update/:id' element={<UpdateEvent />} />
 
@@ -196,7 +202,7 @@ import UpdateEvent from './UpdateEvent.jsx'
         <div className="homeabout-footer-homesch">
    
          <ul >
-            <li><a href="/homesch">الرئيسية </a></li>
+            <li><a href="/">الرئيسية </a></li>
               <li><a href="/aboutsch"> حول المدرسه </a></li>
             <li><a href="/eventsch">الأنشطة </a></li>
             <li><a href="/contactsch">الاتصال </a></li>
